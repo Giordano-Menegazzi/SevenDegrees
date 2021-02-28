@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var favoriteActors = ["Denzel Washington", "Tom Cruise", "Ellende", "Drama", "Blabla", "Test Test"]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("SearchBar.....")
+                .padding()
+            
+            List {
+                ForEach(favoriteActors) { actor in
+                    Text(favoriteActors[actor])
+                }
+            }
+        }
     }
 }
 
